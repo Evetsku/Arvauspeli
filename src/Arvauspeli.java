@@ -6,16 +6,17 @@ public class Arvauspeli {
         String oikeanimi = "Emma";
         String nimi;
 
-        System.out.println("Arvaa nimi!");
 
         do{
-            System.out.println("Anna nimi!");
+            System.out.println("Arvaa nimi!");
             nimi = in.nextLine();
 
             if (nimi.equals(oikeanimi)){
-                System.out.println("Onnea!")
+                System.out.println("Onnea!");
+            } else {
+                System.out.println("Väärin, yritä uudelleen.");
             }
-        }
+        } while (!nimi.equals(oikeanimi));
 
 
     }
