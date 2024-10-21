@@ -5,14 +5,19 @@ public class Arvauspeli {
 
         String oikeanimi = "Emma";
         String nimi;
-
+        int arvaustenMaara = 0;
 
         do{
             System.out.println("Arvaa nimi!");
             nimi = in.nextLine();
+            arvaustenMaara++;
 
+            if (nimi.equalsIgnoreCase("loppu")){
+                System.out.println("Peli loppui.");
+                break;
+            }
             if (nimi.equals(oikeanimi)){
-                System.out.println("Onnea!");
+                System.out.println("Onnea, arvasit oikein " + arvaustenMaara + ". yrityksellä!");
             } else {
                 System.out.println("Väärin, yritä uudelleen.");
             }
